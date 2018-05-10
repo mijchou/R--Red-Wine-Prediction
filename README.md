@@ -1,6 +1,6 @@
 # R--Red-Wine-Prediction
 
-This repository will contain different predictive methods of the red wine ratings (along with my own explanations!) based on various features. Data can be found as *red.txt* under the main directory.
+This repository contains different predictive methods of the red wine ratings (along with my own explanations!) based on various features. Data can be found as *red.txt* under the main directory.
 
 Content:
 
