@@ -6,7 +6,8 @@ Content:
 
 1. **Decision Tree** (packages: rpart, caret) <br/>
 2. **Neural Networks** (packages: nnet, caret) <br/>
-3. **VGAM/VGLM** (packages: VGAM, caret) <br/>
+3. **SVM** (packages: e1071, caret) <br/>
+4. **VGAM/VGLM** (packages: VGAM, caret) <br/>
 
 Setup
 =====
