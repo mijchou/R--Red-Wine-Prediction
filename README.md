@@ -39,10 +39,12 @@ test <- red.df[index, ]
 Modelling
 =========
 
-The train() function from the caret package trains the model with given arguments. According to the method used, specific tuning parameters will be required to tune the model. Here we have rpart requiring cp (Complexity Parameter) as its only parameter. A grid of cp can be fed to the argument tuneGrid for search of best result (E.g. Choosing the value of cp giving the lowest RMSE.) trControl specifies the type of resampling.
+The train() function from the caret package trains the model with given arguments. According to the method used, specific tuning parameters will be required to tune the model. Here we have rpart requiring cp (Complexity Parameter) as its only parameter. A grid of cp can be fed to the argument tuneGrid for search of best result (E.g. Choosing the value of cp giving the lowest RMSE.) trControl specifies the type of resampling. <br/>
 
-Decision Tree - Red Wine Prediction
-================
+Several models will be built and compared at the end of the repository.
+
+Decision Tree (rpart - regressive partitioning)
+===============================================
 
 Grid of tuning paramters
 
@@ -67,8 +69,7 @@ rtCV <- train(quality ~ ., data = train, # model training
               trControl = trControl)
 ```
 
-Model Checking
-==============
+## Model Checking
 
 Checking the model rtCV and its plot, we see that the lowest RMSE happens at cp = 0.005.
 
@@ -85,8 +86,7 @@ plot(rtCV)
 
 ![](/Decision_Tree/Decision_Tree_with_caret_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
-Prediction and evaluation
-=========================
+## Prediction and evaluation
 
 Final step: Making prediction with the test set on-hold. Check out the MSE (mean squared error)--the mean of squared distance between each predicted and the original value.
 
@@ -110,3 +110,7 @@ MSE
 ```
 
     ## [1] 0.4174422
+
+### rpart MSE = 0.42
+
+
