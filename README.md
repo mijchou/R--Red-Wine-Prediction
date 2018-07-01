@@ -4,19 +4,26 @@ This repository contains different predictive methods of the red wine ratings (a
 
 Content:
 
-1. **Decision Tree** (packages: rpart, caret) <br/>
-2. **SVM** (packages: e1071, caret) <br/>
-3. **KNN** (packages:
-3. **VGAM/VGLM** (packages: VGAM, caret) <br/>
-4. **XGBoost** (packages: xgboost, caret) <br/>
+1. **Decision Tree** (packages: rpart) <br/>
+2. **SVM** (packages: e1071) <br/>
+3. **KNN** (packages: class)
+3. **VGAM/VGLM** (packages: VGAM) <br/>
+4. **XGBoost** (packages: xgboost) <br/>
 
-Setup
-=====
+With each model we will tune the parameters with the package **caret** (Classification And REgression Training).
 
-R package caret (Classification And REgression Training) will mainly be used to train our models in this repository.
+## Setup
 
-Data Checking
-=============
+``` r
+library(rpart)
+
+library(e1071)
+library(class)
+library(VGAM)
+library(xgboost)
+```
+
+## Data Checking
 
 Overview the data with str() and check that no missing values are present.
 
@@ -25,8 +32,7 @@ str(red.df)
 any(is.na(red.df)) # checking missing values
 ```
 
-Splitting
-=========
+## Training/Test Sets Division
 
 Split the dataset into 90% & 10% for training & test sets.
 
@@ -37,8 +43,7 @@ train <- red.df[-index, ]
 test <- red.df[index, ]
 ```
 
-Modelling
-=========
+## Modelling
 
 The train() function from the caret package trains the model with given arguments. According to the method used, specific tuning parameters will be required to tune the model. Here we have rpart requiring cp (Complexity Parameter) as its only parameter. A grid of cp can be fed to the argument tuneGrid for search of best result (E.g. Choosing the value of cp giving the lowest RMSE.) trControl specifies the type of resampling. <br/>
 
@@ -47,7 +52,9 @@ Several models will be built and compared at the end of the repository.
 Decision Tree (rpart - regressive partitioning)
 ===============================================
 
-## Parameters Tuning
+
+
+### Parameters Tuning
 
 Grid of tuning paramters
 
@@ -72,7 +79,7 @@ rtCV <- train(quality ~ ., data = train, # model training
               trControl = trControl)
 ```
 
-## Model Checking
+### Model Checking
 
 Checking the model rtCV and its plot, we see that the lowest RMSE happens at cp = 0.005.
 
@@ -89,7 +96,7 @@ plot(rtCV)
 
 ![](/Decision_Tree/Decision_Tree_with_caret_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
-## Prediction and evaluation
+### Prediction and evaluation
 
 Final step: Making prediction with the test set on-hold. Check out the MSE (mean squared error)--the mean of squared distance between each predicted and the original value.
 
@@ -107,6 +114,8 @@ head(test$quality) # original
 
     ## [1] 5 6 6 5 6 5
 
+To find out the Mean Squared Error (MSE) of the prediction:
+
 ``` r
 MSE <- mean((pred - test$quality)^2)
 MSE
@@ -114,20 +123,30 @@ MSE
 
     ## [1] 0.4174422
 
-### rpart MSE = 0.42
+rpart MSE = 0.42
+
+
+
+KNN (k-nearest neighbour)
+===
+
+### Parameters Tuning
+
+### Model Checking
+
+### Prediction and Evaluation
+
 
 
 
 SVM
 ===
 
-## Parameters Tuning
+### Parameters Tuning
 
-## Model Checking
+### Model Checking
 
-## Prediction and Evaluation
-
-### SVM MSE = 
+### Prediction and Evaluation
 
 
 
@@ -135,28 +154,22 @@ SVM
 VGAM/VGLM
 =========
 
-## Parameters Tuning
+### Parameters Tuning
 
-## Model Checking
+### Model Checking
 
-## Prediction and Evaluation
-
-### VGLM MSE = 
+### Prediction and Evaluation
 
 
 
-
-VGAM/VGLM
-=========
-
-## Parameters Tuning
-
-## Model Checking
-
-## Prediction and Evaluation
-
-### VGLM MSE = 
+MSE comparison of models
+========================
 
 
 
+
+
+
+
+## Resources
 
