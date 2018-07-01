@@ -120,6 +120,17 @@ MSE
 SVM
 ===
 
-## 
+## Parameters Tuning
+
+## Model Checking
+
+## Prediction and Evaluation
+
+### SVM MSE = 
+
+
+
+
+
 
 
