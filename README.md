@@ -5,9 +5,9 @@ This repository contains different predictive methods of the red wine ratings (a
 Content:
 
 1. **Decision Tree** (packages: rpart, caret) <br/>
-2. **Neural Networks** (packages: nnet, caret) <br/>
-3. **SVM** (packages: e1071, caret) <br/>
-4. **VGAM/VGLM** (packages: VGAM, caret) <br/>
+2. **SVM** (packages: e1071, caret) <br/>
+3. **VGAM/VGLM** (packages: VGAM, caret) <br/>
+4. **XGBoost** (packages: xgboost, caret) <br/>
 
 Setup
 =====
