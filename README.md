@@ -46,6 +46,8 @@ Several models will be built and compared at the end of the repository.
 Decision Tree (rpart - regressive partitioning)
 ===============================================
 
+## Parameters Tuning
+
 Grid of tuning paramters
 
 ``` r
@@ -112,5 +114,12 @@ MSE
     ## [1] 0.4174422
 
 ### rpart MSE = 0.42
+
+
+
+SVM
+===
+
+## 
 
 
