@@ -6,6 +6,7 @@ Content:
 
 1. **Decision Tree** (packages: rpart, caret) <br/>
 2. **SVM** (packages: e1071, caret) <br/>
+3. **KNN** (packages:
 3. **VGAM/VGLM** (packages: VGAM, caret) <br/>
 4. **XGBoost** (packages: xgboost, caret) <br/>
 
@@ -130,6 +131,31 @@ SVM
 
 
 
+
+VGAM/VGLM
+=========
+
+## Parameters Tuning
+
+## Model Checking
+
+## Prediction and Evaluation
+
+### VGLM MSE = 
+
+
+
+
+VGAM/VGLM
+=========
+
+## Parameters Tuning
+
+## Model Checking
+
+## Prediction and Evaluation
+
+### VGLM MSE = 
 
 
 
