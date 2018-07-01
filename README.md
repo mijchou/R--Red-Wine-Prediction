@@ -52,7 +52,7 @@ Several models will be built and compared at the end of the repository.
 Decision Tree (rpart - regressive partitioning)
 ===============================================
 
-
+Tree-based methods are simiple and useful for interpretation. It can be applied to both regression and classification problems. Extended methods such as baggin, random forest an boosting are built upon the basic decision trees.
 
 ### Parameters Tuning
 
