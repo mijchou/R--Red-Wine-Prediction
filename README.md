@@ -5,10 +5,7 @@ This repository contains different predictive methods of the red wine ratings (a
 Content:
 
 1. **Decision Tree** (packages: rpart) <br/>
-2. **SVM** (packages: e1071) <br/>
 3. **KNN** (packages: class)
-3. **VGAM/VGLM** (packages: VGAM) <br/>
-4. **XGBoost** (packages: xgboost) <br/>
 
 With each model we will tune the parameters with the package **caret** (Classification And REgression Training).
 
