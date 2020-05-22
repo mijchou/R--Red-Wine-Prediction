@@ -6,8 +6,6 @@ Content:
 
 1. **Regression Tree** (packages: rpart) <br/>
 2. **Pruned Regression Tree** <br/>
-3. **KNN** (packages: class) </br>
-4. **Neural Networks**
 
 With each model we will tune the parameters with the package **caret** (Classification And REgression Training).
 
